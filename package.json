@@ -1,26 +1,29 @@
 {
-  "name": "todos-express-password",
+  "name": "todosapi-express-bearer",
   "version": "0.0.0",
   "private": true,
-  "description": "Todo app using Express, Passport, and SQLite for sign in with username and password.",
+  "description": "Todo API using Express and Passport to authenticate bearer tokens.",
   "keywords": [
     "example",
     "express",
     "passport",
-    "sqlite"
+    "sqlite",
+    "oauth",
+    "oauth2",
+    "bearer"
   ],
   "author": {
     "name": "Jared Hanson",
     "email": "jaredhanson@gmail.com",
     "url": "https://www.jaredhanson.me/"
   },
-  "homepage": "https://github.com/passport/todos-express-password",
+  "homepage": "https://github.com/passport/todosapi-express-bearer",
   "repository": {
     "type": "git",
-    "url": "git://github.com/passport/todos-express-password.git"
+    "url": "git://github.com/passport/todosapi-express-bearer.git"
   },
   "bugs": {
-    "url": "https://github.com/passport/todos-express-password/issues"
+    "url": "https://github.com/passport/todosapi-express-bearer/issues"
   },
   "funding": {
     "type": "github",
