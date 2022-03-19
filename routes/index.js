@@ -3,9 +3,24 @@ var passport = require('passport');
 var BearerStrategy = require('passport-http-bearer');
 var db = require('../db');
 
+
 passport.use(new BearerStrategy(function(token, cb) {
-  // TODO: verify the token
-  return cb(null, { id: 1 });
+  db.users.get('SELECT * FROM access_tokens WHERE value = ?', [
+    token
+  ], function(err, row) {
+    console.log('GOT TOKEN');
+    console.log(err);
+    console.log(row);
+    
+    
+    if (err) { return cb(err); }
+    if (!row) { return cb(null, false); }
+    var user = {
+      id: row.user_id
+    };
+    // TODO: Pass scope as info
+    return cb(null, user);
+  });
 }));
 
 var router = express.Router();

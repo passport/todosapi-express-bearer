@@ -29,4 +29,7 @@ db.serialize(function() {
   ]);
 });
 
-module.exports = db;
+var usersDB = new sqlite3.Database(process.env['USERS_DATABASE_PATH'] || 'var/db/users.db', sqlite3.OPEN_READONLY);
+
+exports = module.exports = db;
+exports.users = usersDB;
